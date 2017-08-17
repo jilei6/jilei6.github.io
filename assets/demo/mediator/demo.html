@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="jilei.site">
   <title>Jaren的移动城堡</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我的博客信息备份 博客地址：http://jilei.site/  相册功能 最终效果请看这里：http://www.jilei.site/photos/">
+  <meta name="description" content="*{ 		margin:0; 		padding:0; 	} 	#textBox{ 		position: absolute; 		left: 0; 		top: 0; 		z-index: -999; 	} 	#bg{ 		background: url(sgws.jpg) -50px;  		width:500px; 		height: 314px; 		text-align:">
 <meta name="keywords" content="“iOS,Java,python,Linux,Hadoop,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder&quot;">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Jaren的移动城堡">
-<meta property="og:url" content="jilei.site/README.html">
+<meta property="og:url" content="jilei.site/assets/demo/mediator/demo.html">
 <meta property="og:site_name" content="Jaren的移动城堡">
-<meta property="og:description" content="我的博客信息备份 博客地址：http://jilei.site/  相册功能 最终效果请看这里：http://www.jilei.site/photos/">
+<meta property="og:description" content="*{ 		margin:0; 		padding:0; 	} 	#textBox{ 		position: absolute; 		left: 0; 		top: 0; 		z-index: -999; 	} 	#bg{ 		background: url(sgws.jpg) -50px;  		width:500px; 		height: 314px; 		text-align:">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-08-17T02:48:51.000Z">
+<meta property="og:updated_time" content="2017-07-28T03:51:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Jaren的移动城堡">
-<meta name="twitter:description" content="我的博客信息备份 博客地址：http://jilei.site/  相册功能 最终效果请看这里：http://www.jilei.site/photos/">
+<meta name="twitter:description" content="*{ 		margin:0; 		padding:0; 	} 	#textBox{ 		position: absolute; 		left: 0; 		top: 0; 		z-index: -999; 	} 	#bg{ 		background: url(sgws.jpg) -50px;  		width:500px; 		height: 314px; 		text-align:">
   
     <link rel="alternative" href="/atom.xml" title="Jaren的移动城堡" type="application/atom+xml">
   
@@ -156,13 +156,80 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="我的博客信息备份"><a href="#我的博客信息备份" class="headerlink" title="我的博客信息备份"></a>我的博客信息备份</h1><ul>
-<li>博客地址：<a href="http://jilei.site/">http://jilei.site/</a></li>
-</ul>
-<h1 id="相册功能"><a href="#相册功能" class="headerlink" title="相册功能"></a>相册功能</h1><ul>
-<li>最终效果请看这里：<a href="http://www.jilei.site/photos/" target="_blank" rel="external">http://www.jilei.site/photos/</a></li>
-</ul>
+        <!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="jquery.js"></script>
+<style type="text/css">
+	*{
+		margin:0;
+		padding:0;
+	}
+	#textBox{
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: -999;
+	}
+	#bg{
+		background: url(sgws.jpg) -50px;
 
+		width:500px;
+		height: 314px;
+		text-align: center;
+		position: relative;
+		-webkit-animation:roll 3s infinite ease ;
+		   -moz-animation:roll 3s infinite ease ;
+		    -ms-animation:roll 3s infinite ease ;
+		     -o-animation:roll 3s infinite ease ;
+				animation:roll 3s infinite ease ;
+	}
+	#barHome{
+		width: 300px;
+		height: 10px;
+		background: #f00;
+		overflow: hidden;
+		position: absolute;
+		bottom: 45px;
+		left: 50%;
+		margin-left: -150px;
+	}
+	#barGuest{
+		width: 150px;
+		height: 10px;
+		background: #00f;
+	}
+	#results{
+		width: 300px;
+		position: absolute;
+		bottom: 65px;
+		left: 50%;
+		margin-left: -150px;
+		color: #fff;
+	}
+	#results span{
+		margin: 50px;
+	}
+	@-webkit-keyframes roll {0%{background-position: -90px;}50%{background-position: -10px;}100%{background-position: -90px;}}
+	@-moz-keyframes roll {0%{background-position: -90px;}50%{background-position: -10px;}100%{background-position: -90px;}}
+	@-ms-keyframes roll {0%{background-position: -90px;}50%{background-position: -10px;}100%{background-position: -90px;}}
+	@-o-keyframes roll {0%{background-position: -90px;}50%{background-position: -10px;}100%{background-position: -90px;}}
+	@keyframes roll {0%{background-position: -90px;}50%{background-position: -10px;}100%{background-position: -90px;}}
+</style>
+<title>mediator</title>
+</head>
+<body>
+	<div id="bg">
+		<input id="textBox" type="text">
+		<div id="results">请按F键与J键</div>
+		<div id="barHome">
+			<div id="barGuest"></div>
+		</div>
+	</div>
+<script type="text/javascript" src="mediator.js"></script>
+</body>
+</html>
       
 
       
@@ -251,7 +318,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http:jilei.site/README.html" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http:jilei.site/assets/demo/mediator/demo.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -288,7 +355,7 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "jilei.site/README.html", 
+    url: "jilei.site/assets/demo/mediator/demo.html", 
     sourceId: "",
     productKey: "flase",
     target: "cloud-tie-wrapper"

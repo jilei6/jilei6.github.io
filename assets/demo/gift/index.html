@@ -8,18 +8,20 @@
   <link rel="dns-prefetch" href="jilei.site">
   <title>Jaren的移动城堡</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我的博客信息备份 博客地址：http://jilei.site/  相册功能 最终效果请看这里：http://www.jilei.site/photos/">
+  <meta name="description" content="礼物 - 3.8 	 	 	 	   	 	 		3.8节礼物，来了… 		 		 			 				 					首先，你要输入我的生日 					 					接着，摇一摇… 					 					最后，这就是见证奇迹的时刻… 				 				 					3.8节快乐！ 					祝身体健康,平安长乐 					请打开音量收听…">
 <meta name="keywords" content="“iOS,Java,python,Linux,Hadoop,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder&quot;">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Jaren的移动城堡">
-<meta property="og:url" content="jilei.site/README.html">
+<meta property="og:url" content="jilei.site/assets/demo/gift/index.html">
 <meta property="og:site_name" content="Jaren的移动城堡">
-<meta property="og:description" content="我的博客信息备份 博客地址：http://jilei.site/  相册功能 最终效果请看这里：http://www.jilei.site/photos/">
+<meta property="og:description" content="礼物 - 3.8 	 	 	 	   	 	 		3.8节礼物，来了… 		 		 			 				 					首先，你要输入我的生日 					 					接着，摇一摇… 					 					最后，这就是见证奇迹的时刻… 				 				 					3.8节快乐！ 					祝身体健康,平安长乐 					请打开音量收听…">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-08-17T02:48:51.000Z">
+<meta property="og:image" content="jilei.site/assets/demo/gift/img/shake.png">
+<meta property="og:updated_time" content="2017-07-28T03:51:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Jaren的移动城堡">
-<meta name="twitter:description" content="我的博客信息备份 博客地址：http://jilei.site/  相册功能 最终效果请看这里：http://www.jilei.site/photos/">
+<meta name="twitter:description" content="礼物 - 3.8 	 	 	 	   	 	 		3.8节礼物，来了… 		 		 			 				 					首先，你要输入我的生日 					 					接着，摇一摇… 					 					最后，这就是见证奇迹的时刻… 				 				 					3.8节快乐！ 					祝身体健康,平安长乐 					请打开音量收听…">
+<meta name="twitter:image" content="jilei.site/assets/demo/gift/img/shake.png">
   
     <link rel="alternative" href="/atom.xml" title="Jaren的移动城堡" type="application/atom+xml">
   
@@ -156,13 +158,88 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="我的博客信息备份"><a href="#我的博客信息备份" class="headerlink" title="我的博客信息备份"></a>我的博客信息备份</h1><ul>
-<li>博客地址：<a href="http://jilei.site/">http://jilei.site/</a></li>
-</ul>
-<h1 id="相册功能"><a href="#相册功能" class="headerlink" title="相册功能"></a>相册功能</h1><ul>
-<li>最终效果请看这里：<a href="http://www.jilei.site/photos/" target="_blank" rel="external">http://www.jilei.site/photos/</a></li>
-</ul>
+        <!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no">
+	<title>礼物 - 3.8</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/zepto.min.js"></script>
+	<script src="js/shake.js"></script>
+</head>
+<body>
+	<!-- <div id="my_player"></div> -->
+	<header>
+		<p>3.8节礼物，来了…</p>
+		<div class="paper-t"></div>
+		<div class="main">
+			<div class="main-top top2">
+				<section id="se1">
+					<p>首先，你要输入我的生日</p>
+					<input id="myBir" type="text" placeholder="4位数，格式为:mmdd">
+					<p>接着，摇一摇…</p>
+					<img src="img/shake.png">
+					<p>最后，这就是见证奇迹的时刻…</p>
+				</section>
+				<section id="se2" class="hide">
+					<p>3.8节快乐！</p>
+					<p>祝身体健康,平安长乐</p>
+					<p>请打开音量收听…</p>
+				</section>
+			</div>
+		</div>
+		<div class="paper-b"></div>
+	</header>
+</body>
+	<script>
+		var Main = (function() {
+			function playAudio(src) {
+			    if (typeof Audio != "undefined") { 
+			        new Audio(src).play() ;
+			    } else if (typeof device != "undefined") {
+			        if (device.platform == 'Android') {
+			            console.log(src);
+			        }
+			        var mediaRes = new Media(src,
+			            function onSuccess() {
+			                mediaRes.release();
+			            },
+			            function onError(e){
+			                console.log("error playing sound: " + JSON.stringify(e));
+			            });
+			        mediaRes.play();
 
+			    } else {
+			        alert("no sound API to play: " + src);
+			    }
+			}
+			window.addEventListener('shake', autoRun, false);
+			function autoRun(){
+				if($("#myBir").val() == "0425"){
+					$("#se1").hide();
+					$("#se2").show();
+					playAudio("media/gift.ogg");
+				}else{
+					alert("生日错误");
+				}
+				
+			}
+			var init = function() {
+				
+			}
+			return {
+				init: init
+			}
+		})();
+
+		$(Main.init());
+	</script>
+</html>
       
 
       
@@ -251,7 +328,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http:jilei.site/README.html" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http:jilei.site/assets/demo/gift/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -288,7 +365,7 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "jilei.site/README.html", 
+    url: "jilei.site/assets/demo/gift/index.html", 
     sourceId: "",
     productKey: "flase",
     target: "cloud-tie-wrapper"
