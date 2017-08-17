@@ -5,18 +5,18 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="jilei.site">
+  <link rel="dns-prefetch" href="//www.jilei.site">
   <title>pjax: 当ajax遇上pushState | Jaren的移动城堡</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="var pjax = pushState + ajax;小时候，小浣熊方便面里面有各种水浒人物的卡片。我买了一包，吃了方便面，饱了。而我又买了第二包，不是想吃方便面，而是仅仅想得到里面的卡片…">
 <meta name="keywords" content="python,object-c">
 <meta property="og:type" content="article">
 <meta property="og:title" content="pjax: 当ajax遇上pushState">
-<meta property="og:url" content="jilei.site/2017/07/28/about-pjax/index.html">
+<meta property="og:url" content="//www.jilei.site/2017/07/28/about-pjax/index.html">
 <meta property="og:site_name" content="Jaren的移动城堡">
 <meta property="og:description" content="var pjax = pushState + ajax;小时候，小浣熊方便面里面有各种水浒人物的卡片。我买了一包，吃了方便面，饱了。而我又买了第二包，不是想吃方便面，而是仅仅想得到里面的卡片…">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-08-17T03:04:12.000Z">
+<meta property="og:updated_time" content="2017-08-17T04:04:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="pjax: 当ajax遇上pushState">
 <meta name="twitter:description" content="var pjax = pushState + ajax;小时候，小浣熊方便面里面有各种水浒人物的卡片。我买了一包，吃了方便面，饱了。而我又买了第二包，不是想吃方便面，而是仅仅想得到里面的卡片…">
@@ -169,6 +169,34 @@
         
       </header>
     
+<!-- 目录内容 -->
+
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+          <span class="btn-bg"></span>
+          <span class="btn-text">文章导航</span>
+          </p>
+	<div id="toc-article" class="toc-article">
+	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+		<strong class="toc-title">文章目录</strong>
+           
+         </div>
+   <script type="text/javascript">
+	function showToc(){
+		var toc_article = document.getElementById("toc-article");
+		var show_toc_btn = document.getElementById("show-toc-btn");
+		toc_article.setAttribute("style","display:block");
+		show_toc_btn.setAttribute("style","display:none");
+		};
+	function showBtn(){
+		var toc_article = document.getElementById("toc-article");
+		var show_toc_btn = document.getElementById("show-toc-btn");
+		toc_article.setAttribute("style","display:none");
+		show_toc_btn.setAttribute("style","display:block");
+		};
+   </script>
+      		
+<!-- 目录内容结束 -->
+
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
@@ -326,11 +354,12 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http:jilei.site/2017/07/28/about-pjax/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.jilei.site/2017/07/28/about-pjax/" alt="微信分享二维码">
     </div>
 </div>
 
 <div class="mask js-mask"></div>
+
       
       <div class="clearfix"></div>
     </div>
@@ -366,6 +395,19 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在的…
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -377,7 +419,7 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "jilei.site/2017/07/28/about-pjax/", 
+    url: "//www.jilei.site/2017/07/28/about-pjax/", 
     sourceId: "about-pjax",
     productKey: "flase",
     target: "cloud-tie-wrapper"
