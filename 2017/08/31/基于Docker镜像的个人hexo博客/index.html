@@ -6,33 +6,32 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.jilei.site">
-  <title>Dockers 是个什么鬼？ | Jaren的移动城堡</title>
+  <title>基于Docker镜像的个人hexo博客 | Jaren的移动城堡</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最近因为通过hexo搭建了一个简易的个人静态博客，因为嫌弃hexo部署冗杂的步骤，所以研究了一些自动化部署的机制，其中就了解到了Docker,粗略的研究了下后，想跟大家一起分享下个人的一些心得理解">
+  <meta name="description" content="起因：本着程序员以懒为荣的态度，一直想着开一个自己的专属博客，但实在是太懒了，一直未能成行，但是最近看到比我还懒的长老也开始玩博客了，实在是不能忍了，毅然决定放下那份荣耀，毕竟维斯特洛大陆已经凛冬已至了。博客走起~">
 <meta name="keywords" content="“iOS,Java,python,Linux,Hadoop,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder&quot;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Dockers 是个什么鬼？">
-<meta property="og:url" content="http://www.jilei.site/2017/08/23/Dockers-是个什么鬼？/index.html">
+<meta property="og:title" content="基于Docker镜像的个人hexo博客">
+<meta property="og:url" content="http://www.jilei.site/2017/08/31/基于Docker镜像的个人hexo博客/index.html">
 <meta property="og:site_name" content="Jaren的移动城堡">
-<meta property="og:description" content="最近因为通过hexo搭建了一个简易的个人静态博客，因为嫌弃hexo部署冗杂的步骤，所以研究了一些自动化部署的机制，其中就了解到了Docker,粗略的研究了下后，想跟大家一起分享下个人的一些心得理解">
+<meta property="og:description" content="起因：本着程序员以懒为荣的态度，一直想着开一个自己的专属博客，但实在是太懒了，一直未能成行，但是最近看到比我还懒的长老也开始玩博客了，实在是不能忍了，毅然决定放下那份荣耀，毕竟维斯特洛大陆已经凛冬已至了。博客走起~">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://www.jilei.site/assets/blogImg/dockerwork.jpg">
-<meta property="og:image" content="http://www.jilei.site/assets/blogImg/dockerwork.jpg">
-<meta property="og:image" content="http://www.jilei.site/assets/blogImg/docker3.png">
-<meta property="og:image" content="http://www.jilei.site/assets/blogImg/docker6.png">
-<meta property="og:image" content="http://www.jilei.site/assets/blogImg/docker2.png">
-<meta property="og:image" content="http://www.jilei.site/assets/blogImg/docker4.png">
-<meta property="og:image" content="http://www.jilei.site/assets/blogImg/docker7.png">
-<meta property="og:image" content="http://www.jilei.site/assets/blogImg/docker8.png">
-<meta property="og:image" content="http://www.jilei.site/assets/blogImg/docker9.png">
-<meta property="og:image" content="http://www.jilei.site/assets/blogImg/docker10.png">
-<meta property="og:image" content="http://www.jilei.site/assets/blogImg/docker11.png">
-<meta property="og:image" content="http://www.jilei.site/assets/blogImg/docker12.png">
-<meta property="og:updated_time" content="2017-08-31T09:49:55.000Z">
+<meta property="og:image" content="http://www.jilei.site/assets/blogImg/snow.jpg">
+<meta property="og:image" content="http://www.jilei.site/assets/blogImg/hexo+docker+github+Travis的设计图.png">
+<meta property="og:image" content="http://www.jilei.site/assets/blogImg/GitHub1.png">
+<meta property="og:image" content="http://www.jilei.site/assets/blogImg/github6.png">
+<meta property="og:image" content="http://www.jilei.site/assets/blogImg/github3.png">
+<meta property="og:image" content="http://www.jilei.site/assets/blogImg/github2.png">
+<meta property="og:image" content="http://www.jilei.site/assets/blogImg/coding1.png">
+<meta property="og:image" content="http://www.jilei.site/assets/blogImg/coding2.png">
+<meta property="og:image" content="http://www.jilei.site/assets/blogImg/coding3.png">
+<meta property="og:image" content="http://www.jilei.site/assets/blogImg/coding4.png">
+<meta property="og:image" content="http://www.jilei.site/assets/blogImg/coding5.png">
+<meta property="og:updated_time" content="2017-08-31T09:51:39.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dockers 是个什么鬼？">
-<meta name="twitter:description" content="最近因为通过hexo搭建了一个简易的个人静态博客，因为嫌弃hexo部署冗杂的步骤，所以研究了一些自动化部署的机制，其中就了解到了Docker,粗略的研究了下后，想跟大家一起分享下个人的一些心得理解">
-<meta name="twitter:image" content="http://www.jilei.site/assets/blogImg/dockerwork.jpg">
+<meta name="twitter:title" content="基于Docker镜像的个人hexo博客">
+<meta name="twitter:description" content="起因：本着程序员以懒为荣的态度，一直想着开一个自己的专属博客，但实在是太懒了，一直未能成行，但是最近看到比我还懒的长老也开始玩博客了，实在是不能忍了，毅然决定放下那份荣耀，毕竟维斯特洛大陆已经凛冬已至了。博客走起~">
+<meta name="twitter:image" content="http://www.jilei.site/assets/blogImg/snow.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Jaren的移动城堡" type="application/atom+xml">
   
@@ -164,20 +163,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Dockers-是个什么鬼？" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-基于Docker镜像的个人hexo博客" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Dockers 是个什么鬼？
+      基于Docker镜像的个人hexo博客
     </h1>
   
 
         
-        <a href="/2017/08/23/Dockers-是个什么鬼？/" class="archive-article-date">
-  	<time datetime="2017-08-23T10:18:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-23</time>
+        <a href="/2017/08/31/基于Docker镜像的个人hexo博客/" class="archive-article-date">
+  	<time datetime="2017-08-31T09:03:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-31</time>
 </a>
         
       </header>
@@ -188,62 +187,162 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="/assets/blogImg/dockerwork.jpg" alt="docker工作架构图-_-!"> </p>
+        <p>  <img src="/assets/blogImg/snow.jpg" alt="ico原来的样子"> </p>
 <blockquote>
-<p>最近因为通过hexo搭建了一个简易的个人静态博客，因为嫌弃hexo部署冗杂的步骤，所以研究了一些自动化部署的机制，其中就了解到了Docker,粗略的研究了下后，想跟大家一起分享下个人的一些心得理解<br><a id="more"></a></p>
+<p>起因：本着程序员以懒为荣的态度，一直想着开一个自己的专属博客，但实在是太懒了，一直未能成行，但是最近看到比我还懒的长老也开始玩博客了，实在是不能忍了，毅然决定放下那份荣耀，毕竟维斯特洛大陆已经凛冬已至了。博客走起~<br><a id="more"></a></p>
 </blockquote>
-<h6 id="一、官方简介"><a href="#一、官方简介" class="headerlink" title="一、官方简介"></a><strong>一、官方简介</strong></h6><ul>
-<li>Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖 &gt; 包到一个可-移植的容器中，然后发布到任何流行的Linux机器上，也可以实现&gt; 虚拟化，容器是完全使用沙-箱机制，相互之间不会有任何接口。</li>
-</ul>
-<p>看完这个介绍，我反而是有了很多的疑惑和不解，比如说，什么是应用容器，什么是虚拟化，相互之间不会有任何接口是什么意思？下面一起来仔细研究下Dockers到底是个什么鬼</p>
-<h6 id="二、应用容器"><a href="#二、应用容器" class="headerlink" title="二、应用容器"></a><strong>二、应用容器</strong></h6><p>   其实从字面上理解的话，应用容器应该就是装载一些Application（应用）的一个容器吧，那这个容器应该长什么样子呢？其实大家可以先自行想象一下手机里面的APP是不是就是运行在各样的系统之中呢，所以，先暂时可以把容器理解成手机的样子。举个简单的例子，客户端开发一般调试离不开模拟器，iOS的模拟器可以说相当的强大，除了不能打电话，其他的基本上都和真机差不多了，那么在电脑中要跑一个类似于手机的东东，就需要配置和手机类似的的运行环境，而模拟器就相当于这个容器，你运行的时候，可以不必要自己去开一个虚拟机，部署一个iOS的运行环境了，可以然你专注于测试你的代码，这就是容器的最大的作用无需硬件，操作系统，运行环境等，只需要运行起来这个容器就好了，当然，容器的好处远远不止这些，比如更仿真的模拟线上环境进行测试，自动化部署机制，有着较高的隔离性和安全性，极大的节省资源等等好处，所以由此来看，容器的作用和好处还是蛮大的，其实说白了，Dockers就是一个轻量级的虚拟机而已。</p>
-<h6 id="三、Docker的基本架构"><a href="#三、Docker的基本架构" class="headerlink" title="三、Docker的基本架构"></a><strong>三、Docker的基本架构</strong></h6><p>Docker 的核心组件包括:  </p>
-<pre><code>- docker 客户端 - Client  
-- Docker 服务器 - Docker daemon  
-- Docker 镜像 - Image  
-- Registry 仓库  
-- Docker 容器 - Container  
-</code></pre><p> Docker 架构如下图所示：<br>  <img src="/assets/blogImg/dockerwork.jpg" alt="docker工作架构图-_-!"> </p>
-<p>  Docker 采用的是 Client/Server 架构。客户端向服务器发送请求，服务器负责构建、运行和分发容器。客户端和服务器可以运行在同一个 Host 上，客户端也可以通过 socket 或 REST API 与远程的服务器通信。</p>
-<p><strong>Docker 客户端</strong> </p>
-<p>最常用的 Docker 客户端是 docker 命令。通过 docker 我们可以方便地在 Host 上构建和运行容器。docker 支持很多操作（子命令）。除了 docker 命令行工具，用户也可以通过 REST API 与服务器通信。</p>
-<p><strong>Docker 服务器</strong></p>
-<p>Docker daemon 是服务器组件，以 Linux 后台服务的方式运行。 Docker daemon 运行在 Docker host 上，负责创建、运行、监控容器，构建、存储镜像。 </p>
-<p><strong>Docker 镜像</strong>  </p>
-<p>可将 Docker 镜像看着只读模板，通过它可以创建 Docker 容器。<br>例如某个镜像可能包含一个 Ubuntu 操作系统、一个 Apache HTTP Server 以及用户开发的 Web 应用。镜像有多种生成方法：</p>
-<p>1.可以从无到有开始创建镜像<br>2.也可以下载并使用别人创建好的现成的镜像<br>3.还可以在现有镜像上创建新的镜像<br>我们可以将镜像的内容和创建步骤描述在一个文本文件中，这个文件被称作 Dockerfile，通过执行 docker build <docker-file> 命令可以构建出 Docker 镜像<br><strong>Docker 容器</strong><br>Docker 容器就是 Docker 镜像的运行实例。</docker-file></p>
-<p>用户可以通过 CLI（docker）或是 API 启动、停止、移动或删除容器。可以这么认为，对于应用软件，镜像是软件生命周期的构建和打包阶段，而容器则是启动和运行阶段。<br><strong>Docker Registry</strong>  </p>
-<p>Registry 是存放 Docker 镜像的仓库，Registry 分私有和公有两种。<br>DockerHub（<a href="https://hub.docker.com/）" target="_blank" rel="external">https://hub.docker.com/）</a> 是默认的 Registry，由 Docker 公司维护，上面有数以万计的镜像，用户可以自由下载和使用。<br>出于对速度或安全的考虑，用户也可以创建自己的私有 Registry。后面我们会学习如何搭建私有 Registry。<br>docker pull 命令可以从 Registry 下载镜像。<br>docker run 命令则是先下载镜像（如果本地没有），然后再启动容器。<br>看完上面的内容基本还是对Docker有了一个比较基础的认识，关于docker的安装，docker命令的使用,docker的设计原理等。</p>
-<h6 id="四、Docker-for-Mac的安装使用"><a href="#四、Docker-for-Mac的安装使用" class="headerlink" title="四、Docker for Mac的安装使用"></a><strong>四、Docker for Mac的安装使用</strong></h6><p>上面讲了docker的一些基本组件，似乎还是不能让你豁然开朗，那好吧，谁让现在已经步入了工程化编码的时代呢，接下来我们用一系列的工具和简单的命令来操作我们的docker这样会让你甚至不用了解它就可以让他为你所用了  </p>
-<p>因为我用的是mac系统，所以我就机遇MAC来进行一些操作，其他的环境小伙伴们可以自行度娘，原理都一样，一通百通。首先给大家分享2个工具，官网下载是在太慢，我把它放到百度云里免除大家被墙的痛苦和煎熬 分别是：Docker for mac 和DockerToolbox    </p>
-<p><strong>为什么使用Docker for Mac</strong>  </p>
-<ul>
-<li>启动时不需要再使用dokcer-machine设定启动的默认的环境，省去了使用virtualbox的过程；  </li>
-<li>享受和在linux下使用docker一样的体验. 总之，新工具更方便！  </li>
-</ul>
-<p><strong>mac下启动docker的工具发展</strong>  </p>
-<ul>
-<li>最开始使用boot2docker  </li>
-<li>再到Docker Toolbox  </li>
-<li>最近新出的 Docker for Mac   </li>
-</ul>
-<p><strong>使用Docker for Mac的一些要求</strong> </p>
-<pre><code>1. Mac must be a 2010 or newer model, with Intel’s hardware support for memory management unit (MMU) virtualization; i.e., Extended Page Tables (EPT)
-2. OS X 10.10.3 Yosemite or newer
-3. At least 4GB of RAM
-4. VirtualBox prior to version 4.3.30 must NOT be installed (it is incompatible with Docker for Mac)
-主要就是看看你的MAC版本要高于10.10.3 内存要大于4G 而且如果安装过VirtualBox的话，他的版本不能高于4.3.30 （这个其实是有点坑的，影响了我本地虚拟的python环境）没办法
-</code></pre><p>链接: <a href="https://pan.baidu.com/s/1i57oY4d" target="_blank" rel="external">https://pan.baidu.com/s/1i57oY4d</a> 密码: nds2<br>好了，下载完成以后安装Docker for Mac<br>打开下载后的镜像文件：<br> <img src="/assets/blogImg/docker3.png" alt="docker工作架构图-_-!"><br> 将Docker拖入Applications即可。<br> 在Applications中打开装好的Docker，看到Docker的欢迎页面，说明安装成功了。   <img src="/assets/blogImg/docker6.png" alt="docker工作架构图-_-!"><br> 按照提示，一路往下走，最终会看到Docker已经运行的页面。  </p>
-<p> <img src="/assets/blogImg/docker2.png" alt="docker工作架构图-_-!"> </p>
-<p>最终 在你的Launchpad中显示如下3个ICON就是已经完成安装成功了</p>
-<p>  <img src="/assets/blogImg/docker4.png" alt="docker工作架构图-_-!"></p>
-<p>接下来检查下版本信息<br> <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> docker --version  </div><div class="line">Docker version 17.03.1-ce-rc1, build 3476dbf  </div><div class="line">  </div><div class="line"><span class="meta">$</span> docker-compose --version  </div><div class="line">docker-compose version 1.11.2, build dfed245  </div><div class="line">  </div><div class="line"><span class="meta">$</span> docker-machine --version  </div><div class="line">docker-machine version 0.10.0, build 76ed2a6</div></pre></td></tr></table></figure></p>
-<p>  至此说明已经安装成功<br>  总结：<br>   新发布的docker for mac工具简化了启动docker的配置，如果之前使用了boot2docker或者docker toolbox，由于两者使用的虚拟机不同，docker-for-mac工具不兼容之前的虚拟机，所以在更新工具时需要清除之前的配置包括卸载虚拟机和修改环境变量等等。<br>具体的两者的工具的比较详见. <a href="https://docs.docker.com/docker-for-mac/docker-toolbox/?spm=5176.100239.blogcont57215.11.fEXQsz" target="_blank" rel="external">这里</a>.</p>
-<p><strong>创建容器并运行它</strong><br>我们下载的可视化工具终于要大显身手了，哈哈<br><img src="/assets/blogImg/docker7.png" alt="docker工作架构图-_-!"><br>点击左上角的 new按钮创建新的容器，因为在dockerHUB上面已经有很多的镜像容器供我们使用了，所以，我们可以直接下载使用，我在这里下载了三个，因为我主要是为了制作hexo镜像所以可以再搜索框中搜索hexo下载量最高的一个使用<br>再下载之前还需要解决一个问题，因为众所周知的原因，dockerhub的镜像元下载会非常之慢，我们需要首先切换镜像元，还好国内有家叫DaoCloud的公司帮我们免费解决了这个问题，首先要登录其<a href="https://dashboard.daocloud.io" target="_blank" rel="external">官网</a>.进行注册流程，该流程不在赘述，注册完成之后进入该页面<br><img src="/assets/blogImg/docker8.png" alt="docker工作架构图-_-!"><br>点击加速器，进入之后选择MAC系统，给直接给你奋发一个镜像链接然后将其如下图添加     </p>
-<p><img src="/assets/blogImg/docker9.png" alt="docker工作架构图-_-!"></p>
-<p><img src="/assets/blogImg/docker10.png" alt="docker工作架构图-_-!">  </p>
-<p>添加完成之后点击apply重新运行<br>然后再下载容器，你会发现嗖嗖的~~<br>下载完成之后，要重新设置镜像的挂载，可视化工具真的是方便啊<br><img src="/assets/blogImg/docker11.png" alt="docker工作架构图-_-!"><br>在这里切换成你的文件夹路径即可，返回Kitematic页面进行重启容器然后测试下<br><img src="/assets/blogImg/docker12.png" alt="docker工作架构图-_-!"><br>OK了</p>
-<p>接下来我会实现一个docker+hexo+github+coding+Travis来实现我的个人博客</p>
+<pre><code>先说下整体思路基于hexo的个人博客，采用docker镜像解决多PC协同问题,采用gitHub和coding双托管博客，采用Travis自动化发布更新博客文章，放一张设计图，图水勿喷
+</code></pre><p>  <img src="/assets/blogImg/hexo+docker+github+Travis的设计图.png" alt="docker工作架构图-_-!"> </p>
+<h4 id="一、搭建Hexo"><a href="#一、搭建Hexo" class="headerlink" title="一、搭建Hexo"></a>一、搭建Hexo</h4><p>正文：</p>
+<p>hexo是一款基于Node.js的静态博客框架, <a href="https://github.com/hexojs/hexo" target="_blank" rel="external">hexo github链接</a>:,这篇教程是针对与Mac的，<a href="http://ibruce.info/2013/11/22/hexo-your-blog/?utm_source=tuicool" target="_blank" rel="external">参考链接</a>:，由于原文讲到的hexo是以前的老版本，所以现在的版本配置的时候会有些改动。</p>
+<p>其实写博客，一方面是给自己做笔记，可以提升自己的写作、总结能力，一个技术点我们会使用，并不难，但是要做到让让别人也能听懂我们讲得，还是需要一定的技巧和经验的。很多类似于简书、CSDN、博客园也都可以写文章，但是页面的样式不能自定义，而且也不是太喜欢，当然简书还算好点得。所以打算用hexo做一个博客。不罗嗦了，直接上搭建步骤，注意这篇教程是针对Mac系统的。本文亦假设首次安装hexo</p>
+<p>配置环境</p>
+<p>安装Node（必须）</p>
+<p>作用：用来生成静态页面的</p>
+<p>到Node.js<a href="https://nodejs.org/en/" target="_blank" rel="external">官网</a>下载相应平台的最新版本，一路安装即可。</p>
+<p>安装Git（必须）</p>
+<p>作用：把本地的hexo内容提交到github上去.</p>
+<p>申请GitHub（必须）</p>
+<p>作用：是用来做博客的远程创库、域名、服务器之类的，怎么与本地hexo建立连接等下讲。</p>
+<p>github账号我也不再啰嗦了,没有的话直接申请就行了，跟一般的注册账号差不多，SSH Keys，看你自己了，可以不配制，不配置的话以后每次对自己的博客有改动提交的时候就要手动输入账号密码，配置了就不需要了，怎么配置我就不多说了，网上有很多教程。（以上如果通过docker下载镜像进行部署，均可省略，其过程可参考我的上一篇<a href="http://www.jilei.site/2017/08/23/Dockers-%E6%98%AF%E4%B8%AA%E4%BB%80%E4%B9%88%E9%AC%BC%EF%BC%9F/">博文</a>）</p>
+<h4 id="1-创建Github-域名和空间"><a href="#1-创建Github-域名和空间" class="headerlink" title="1. 创建Github 域名和空间"></a>1. 创建Github 域名和空间</h4><h6 id="1-1注册"><a href="#1-1注册" class="headerlink" title="1.1注册"></a>1.1注册</h6><p>首先你需要注册一个<a href="https://github.com" target="_blank" rel="external">Github</a>账号，已有的直接略过该段，注意username，这会影响到你的域名，你的域名将会是 username.github.io ，所以认真的取个名字吧。</p>
+<p> <img src="/assets/blogImg/GitHub1.png" alt="docker工作架构图-_-!"> </p>
+<p>注册过程可能需要验证你的邮箱，其他就不在赘述。</p>
+<h6 id="1-2-创建仓库"><a href="#1-2-创建仓库" class="headerlink" title="1.2 创建仓库"></a>1.2 创建仓库</h6><p>然后需要创建一个仓库(repository) 来存储我们的网站，点击首页任意位置出现的New repository按钮创建仓库, Respository name 中的username.github.io 的username一定与前面的Owner 一致，记住你的username下面会用到，如果是正确的话是可以绿色的可以直接创建成功的，我的是因为已经创建过该仓库所以报错的，可以直接忽略掉。<br> <img src="/assets/blogImg/github6.png" alt="docker工作架构图-_-!"> </p>
+<p>第一步就已经完成了，下面是安装。</p>
+<h4 id="2-安装"><a href="#2-安装" class="headerlink" title="2. 安装"></a>2. 安装</h4><p>安装Git</p>
+<p>// 如果已安装HomeBrew 无需执行此行</p>
+<p>$ /usr/bin/ruby -e “$(curl -fsSL <a href="https://raw.githubusercontent.com/Homebrew/install/master/install" target="_blank" rel="external">https://raw.githubusercontent.com/Homebrew/install/master/install</a>)”</p>
+<p>$ brew install git  // 安装Git<br>你也可以通过下载<a href="https://sourceforge.net/projects/git-osx-installer/" target="_blank" rel="external">安装程序</a>来安装</p>
+<p>安装Nodejs</p>
+<p>先安装nvm，这是Nodejs版本管理器，可以轻松切换Nodejs版本。 这里有两种方式安装。如果使用curl的方式安装，安装完成之后一定要重启终端。</p>
+<h6 id="2-1-Homebrew-安装方式，此安装方式无需重启"><a href="#2-1-Homebrew-安装方式，此安装方式无需重启" class="headerlink" title="2.1. Homebrew 安装方式，此安装方式无需重启"></a>2.1. Homebrew 安装方式，此安装方式无需重启</h6><p>$ brew install nvm</p>
+<p>$ mkdir ~/.nvm</p>
+<p>$ export NVM_DIR=~/.nvm</p>
+<p>$ . $(brew –prefix nvm)/nvm.sh</p>
+<h5 id="2-2-curl安装方式"><a href="#2-2-curl安装方式" class="headerlink" title="2.2. curl安装方式"></a>2.2. curl安装方式</h5><p>$ curl <a href="https://raw.github.com/creationix/nvm/master/install.sh" target="_blank" rel="external">https://raw.github.com/creationix/nvm/master/install.sh</a> | sh<br>安装完成后，重启终端并执行下列命令即可安装 Node.js。</p>
+<p>$ nvm install 4<br>安装Hexo</p>
+<p>以上所有都安装完成之后再安装Hexo</p>
+<p>$ sudo npm install hexo-cli -g<br>所有必须工具已经安装完成，下面我们就可以生成博客，上传至我们的Github 仓库了。</p>
+<h4 id="3-编写，发布"><a href="#3-编写，发布" class="headerlink" title="3. 编写，发布"></a>3. 编写，发布</h4><p>接下来我们需要用Hexo初始化一个博客，然后更改一些自定义的配置，或者加上自己喜欢的主题，写上第一篇文章，然后发布到自己的个人Github网站(username.github.io)。</p>
+<h5 id="3-1-创建博客"><a href="#3-1-创建博客" class="headerlink" title="3.1 创建博客"></a>3.1 创建博客</h5><p>将下面的 username 替换成你自己的username(其实也无所谓，作者强迫症)，执行成功后，会创建出一个名为 username.github.io 的文件夹。</p>
+<p>$ hexo init username.github.io</p>
+<h5 id="3-2-更改配置"><a href="#3-2-更改配置" class="headerlink" title="3.2 更改配置"></a>3.2 更改配置</h5><h5 id="3-3-主题安装"><a href="#3-3-主题安装" class="headerlink" title="3.3 主题安装"></a>3.3 主题安装</h5><p>为了使博客不太难看，我们需要安装一个主题，切换至刚刚生成的Hexo 目录，安装主题</p>
+<p>$ cd username.github.io</p>
+<p>$ git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="external">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia</p>
+<h5 id="3-4-配置"><a href="#3-4-配置" class="headerlink" title="3.4 配置"></a>3.4 配置</h5><p>首先我们切换到博客目录下，这个jilei6.github.io是我自己创建的文件夹，主要用来进行博客的管理，ls看下目录下的详情</p>
+<p> <img src="/assets/blogImg/github3.png" alt="docker工作架构图-_-!"><br>yilia主题就在themes目录下了,_config.yml主要是主目录下的一些配置，很清晰，每个地方应该如何填写也很简单</p>
+<pre><code> title: Jaren的移动城堡
+ Subtitle: 凡所有相,皆是虚妄
+ description: 对佛学有些许造诣的互联网小兵一枚。
+ author: Jaren
+ language: zh-CN
+ timezone: Asia/Shanghai #时区
+ email: 434450279@qq.com
+ keywords: “iOS,Java,python,Linux,Hadoop,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder&quot;
+url: http://www.jilei.site
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+enable: true
+line_number: true
+auto_detect: false
+tab_replace:
+index_generator:
+
+per_page: 10
+order_by: -date
+default_category: uncategorized
+category_map:
+tag_map:
+archive: 1
+category: 1
+tag: 1
+port: 4000
+server_ip: localhost
+logger: false
+logger_format: dev
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+per_page: 10
+pagination_dir: page
+theme: yilia
+deploy:
+type: git
+repo:
+ coding:   https://git.coding.net/JarenBig/JarenBig.coding.me.git
+ github: https://github.com/jilei6/jilei6.github.io.git
+ sitemap:
+ path: sitemap.xml
+baidusitemap:
+path: baidusitemap.xml
+feed:
+type: atom
+path: atom.xml
+limit: 100
+jsonContent:
+meta: false
+pages: false
+posts:
+title: true
+date: true
+path: true
+text: false
+raw: false
+content: false
+slug: false
+updated: false
+comments: false
+link: false
+permalink: false
+excerpt: false
+categories: false
+tags: true
+</code></pre><p>里面的配置项很简单，不过还是有一些需要提一下</p>
+<p> <img src="/assets/blogImg/github2.png" alt="docker工作架构图-_-!"> </p>
+<h5 id="3-5-主题配置："><a href="#3-5-主题配置：" class="headerlink" title="3.5 主题配置："></a>3.5 主题配置：</h5><p>主题配置文件在username.github.io/themes/yilia/_config.yml中修改，这里略过。<a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">配置详情</a></p>
+<h3 id="4-写文章"><a href="#4-写文章" class="headerlink" title="4 写文章"></a>4 写文章</h3><p>所有基础框架都已经创建完成，接下来可以开始写你的第一篇博客了</p>
+<p>在username.github.io/source/_posts下创建你的第一个博客吧，例如，创建一个名为测试.md的文件，用Markdown大肆发挥吧，注意保存。</p>
+<p>如：</p>
+<hr>
+<p>title: 测试</p>
+<hr>
+<blockquote>
+<p>鲁班七号，智商二百五，刮风了，下大了。</p>
+</blockquote>
+<h5 id="4-1-测试"><a href="#4-1-测试" class="headerlink" title="4.1 测试"></a>4.1 测试</h5><p>$ hexo s<br>测试服务启动，你可以在浏览器中输入<a href="https://localhost:4000访问了。" target="_blank" rel="external">https://localhost:4000访问了。</a></p>
+<h5 id="4-2-安装hexo-deployer-git自动部署发布工具"><a href="#4-2-安装hexo-deployer-git自动部署发布工具" class="headerlink" title="4.2 安装hexo-deployer-git自动部署发布工具"></a>4.2 安装hexo-deployer-git自动部署发布工具</h5><p>$ npm install hexo-deployer-git –save</p>
+<h5 id="4-3-发布"><a href="#4-3-发布" class="headerlink" title="4.3 发布"></a>4.3 发布</h5><p>测试没问题后，我们就生成静态网页文件发布至我们的Github pages 中。</p>
+<p>$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d<br>如果这是你的第一次，终端会让你输入Github 的邮箱和密码，正确输入后，就会把你的博客上传至Github 了。以后在每次把博客写完后，执行一下这个命令就可以直接发布了。</p>
+<p>至此，一个hexo的个人博客基本上就Ok了,但是，还有一些配置可能需要我们处理一下，比较百度收录啊，配置评论啊，微信分享打赏，部署到<a href="https://coding.net/user" target="_blank" rel="external">coding</a>的服务啊，这些我们下面简单讲一下</p>
+<h4 id="5-配置coding"><a href="#5-配置coding" class="headerlink" title="5 配置coding"></a>5 配置coding</h4><h5 id="5-1"><a href="#5-1" class="headerlink" title="5.1"></a>5.1</h5><p>  其实大家都知道，github毕竟是在国外，国内百度的爬虫是爬不到了，而且国内访问其实是有点慢的，所以，我将博客也部署在了coding上,创建过程和github是一样的，就不在赘述</p>
+<p><img src="/assets/blogImg/coding1.png" alt="docker工作架构图-_-!"> </p>
+<h5 id="5-2-接下来开启pages服务"><a href="#5-2-接下来开启pages服务" class="headerlink" title="5.2 接下来开启pages服务"></a>5.2 接下来开启pages服务</h5><p>进入项目之后，点击侧边栏的代码按钮，再选择page服务，前提是开启page服务是需要完善一些个人信息的，但是coding是免费提供该服务，所以还是值得的</p>
+<p><img src="/assets/blogImg/coding2.png" alt="docker工作架构图-_-!"> </p>
+<p>开启之后如下所示，如果你没有绑定自己的的域名的话，下面的coding page 应该是已经运行在 <a href="https://Youname.coding.me" target="_blank" rel="external">https://Youname.coding.me</a></p>
+<p><img src="/assets/blogImg/coding3.png" alt="docker工作架构图-_-!"> </p>
+<p>然后就在刚才的hexo 配置文件中配置该部署路径就好了，OK你的coding 部署也完成了。</p>
+<h5 id="5-3-修改微信分享呗屏蔽的问题"><a href="#5-3-修改微信分享呗屏蔽的问题" class="headerlink" title="5.3 修改微信分享呗屏蔽的问题"></a>5.3 修改微信分享呗屏蔽的问题</h5><p>修改themes/yilia/layout/_partial/post/share.ejs该文件如下即可</p>
+<p><img src="/assets/blogImg/coding4.png" alt="docker工作架构图-_-!"> </p>
+<h5 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h5><p>当然了，如果你还像我的博客一样，自助一个相册功能的话，还是需要做一些优化的，这一点下一篇我们再给大家讲<br><img src="/assets/blogImg/coding5.png" alt="docker工作架构图-_-!"></p>
 
       
 
@@ -333,7 +432,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://www.jilei.site/2017/08/23/Dockers-是个什么鬼？/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.jilei.site/2017/08/31/基于Docker镜像的个人hexo博客/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -348,18 +447,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/08/31/基于Docker镜像的个人hexo博客/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          基于Docker镜像的个人hexo博客
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/07/28/a-chrismas-ico/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">圣诞到了，帮修改一个头像</div>
+    <a href="/2017/08/23/Dockers-是个什么鬼？/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Dockers 是个什么鬼？</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -390,8 +480,8 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "http://www.jilei.site/2017/08/23/Dockers-是个什么鬼？/", 
-    sourceId: "Dockers-是个什么鬼？",
+    url: "http://www.jilei.site/2017/08/31/基于Docker镜像的个人hexo博客/", 
+    sourceId: "基于Docker镜像的个人hexo博客",
     productKey: "flase",
     target: "cloud-tie-wrapper"
   };
@@ -400,7 +490,7 @@
   
 
   
-  <div id="SOHUCS" sid="Dockers-是个什么鬼？" ></div> 
+  <div id="SOHUCS" sid="基于Docker镜像的个人hexo博客" ></div> 
 <script type="text/javascript"> 
 (function(){ 
 var appid = "cytanNjXJ"; 
