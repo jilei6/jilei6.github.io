@@ -9,7 +9,7 @@
   <title>Dockers 是个什么鬼？ | Jaren的移动城堡</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="最近因为通过hexo搭建了一个简易的个人静态博客，因为嫌弃hexo部署冗杂的步骤，所以研究了一些自动化部署的机制，其中就了解到了Docker,粗略的研究了下后，想跟大家一起分享下个人的一些心得理解">
-<meta name="keywords" content="“iOS,Java,python,Linux,Hadoop,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder&quot;">
+<meta name="keywords" content="Docker,Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Dockers 是个什么鬼？">
 <meta property="og:url" content="http://www.jilei.site/2017/08/23/Dockers-是个什么鬼？/index.html">
@@ -28,7 +28,7 @@
 <meta property="og:image" content="http://www.jilei.site/assets/blogImg/docker10.png">
 <meta property="og:image" content="http://www.jilei.site/assets/blogImg/docker11.png">
 <meta property="og:image" content="http://www.jilei.site/assets/blogImg/docker12.png">
-<meta property="og:updated_time" content="2017-08-31T09:49:55.000Z">
+<meta property="og:updated_time" content="2017-08-31T10:00:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dockers 是个什么鬼？">
 <meta name="twitter:description" content="最近因为通过hexo搭建了一个简易的个人静态博客，因为嫌弃hexo部署冗杂的步骤，所以研究了一些自动化部署的机制，其中就了解到了Docker,粗略的研究了下后，想跟大家一起分享下个人的一些心得理解">
@@ -183,7 +183,31 @@
       </header>
     
 <!-- 目录内容 -->
-		
+
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+          <span class="btn-bg"></span>
+          <span class="btn-text">文章导航</span>
+          </p>
+	<div id="toc-article" class="toc-article">
+	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+		<strong class="toc-title">文章目录</strong>
+           <ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#一、官方简介"><span class="toc-number">1.</span> <span class="toc-text">一、官方简介</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#二、应用容器"><span class="toc-number">2.</span> <span class="toc-text">二、应用容器</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#三、Docker的基本架构"><span class="toc-number">3.</span> <span class="toc-text">三、Docker的基本架构</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#四、Docker-for-Mac的安装使用"><span class="toc-number">4.</span> <span class="toc-text">四、Docker for Mac的安装使用</span></a></li></ol>
+         </div>
+   <script type="text/javascript">
+	function showToc(){
+		var toc_article = document.getElementById("toc-article");
+		var show_toc_btn = document.getElementById("show-toc-btn");
+		toc_article.setAttribute("style","display:block");
+		show_toc_btn.setAttribute("style","display:none");
+		};
+	function showBtn(){
+		var toc_article = document.getElementById("toc-article");
+		var show_toc_btn = document.getElementById("show-toc-btn");
+		toc_article.setAttribute("style","display:none");
+		show_toc_btn.setAttribute("style","display:block");
+		};
+   </script>
+      		
 <!-- 目录内容结束 -->
 
     <div class="article-entry" itemprop="articleBody">
@@ -283,6 +307,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Docker</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -378,6 +417,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#一、官方简介"><span class="toc-number">1.</span> <span class="toc-text">一、官方简介</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#二、应用容器"><span class="toc-number">2.</span> <span class="toc-text">二、应用容器</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#三、Docker的基本架构"><span class="toc-number">3.</span> <span class="toc-text">三、Docker的基本架构</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#四、Docker-for-Mac的安装使用"><span class="toc-number">4.</span> <span class="toc-text">四、Docker for Mac的安装使用</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -516,6 +568,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">object-c</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
             
             <div class="clearfix"></div>
