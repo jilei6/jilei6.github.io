@@ -4,6 +4,56 @@
 
     
   <url>
+    <loc>http://jarenbig.coding.me/2017/09/13/REST%E4%BB%A5%E5%8F%8ARESTful%E7%9A%84%E7%90%86%E8%A7%A3/</loc>
+    <lastmod>2017-10-10T07:01:30.000Z</lastmod>
+    <data>
+        <display>
+        <title>REST以及RESTful的理解</title>
+        <pubTime>2017-09-13T09:47:35.000Z</pubTime>
+        
+        <tag>REST</tag>
+         
+        <tag>RESTful</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>http://jarenbig.coding.me/2017/10/10/%E6%9C%88%E5%85%89%E4%B8%8E%E4%BF%A1%E4%BB%B0/</loc>
+    <lastmod>2017-10-10T05:39:24.000Z</lastmod>
+    <data>
+        <display>
+        <title>月光与信仰</title>
+        <pubTime>2017-10-10T04:04:15.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jarenbig.coding.me/2017/09/18/%E5%9F%BA%E4%BA%8EDocker%E9%95%9C%E5%83%8F%E7%9A%84%E4%B8%AA%E4%BA%BAhexo%E5%8D%9A%E5%AE%A2-%EF%BC%88%E4%BA%8C%EF%BC%89/</loc>
+    <lastmod>2017-09-18T09:28:29.000Z</lastmod>
+    <data>
+        <display>
+        <title>基于Docker镜像的个人hexo博客 （二）</title>
+        <pubTime>2017-09-18T09:15:18.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jarenbig.coding.me/2017/08/31/%E5%9F%BA%E4%BA%8EDocker%E9%95%9C%E5%83%8F%E7%9A%84%E4%B8%AA%E4%BA%BAhexo%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2017-09-13T10:02:31.000Z</lastmod>
     <data>
@@ -41,38 +91,18 @@
     </url>
 
     
-  <url>
-    <loc>http://jarenbig.coding.me/2017/09/13/REST%E4%BB%A5%E5%8F%8ARESTful%E7%9A%84%E7%90%86%E8%A7%A3/</loc>
-    <lastmod>2017-09-13T10:00:32.000Z</lastmod>
-    <data>
-        <display>
-        <title>REST以及RESTful的理解</title>
-        <pubTime>2017-09-13T09:47:35.000Z</pubTime>
-        
-        <tag>REST</tag>
-         
-        <tag>RESTful</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-    
     
     
     
     
     
   <url>
-    <loc>http://jarenbig.coding.me/2017/07/28/about-pjax/</loc>
+    <loc>http://jarenbig.coding.me/2017/08/17/about-pjax/</loc>
     <lastmod>2017-08-17T04:04:18.000Z</lastmod>
     <data>
         <display>
         <title>pjax: 当ajax遇上pushState</title>
-        <pubTime>2017-07-28T03:51:08.000Z</pubTime>
+        <pubTime>2017-08-17T04:04:18.000Z</pubTime>
         
         <tag>python</tag>
          
