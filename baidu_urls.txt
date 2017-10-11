@@ -1,5 +1,1 @@
 http://www.jilei.site/2017/10/10/月光与信仰/
-http://www.jilei.site/2017/09/18/基于Docker镜像的个人hexo博客-（二）/
-http://www.jilei.site/2017/09/13/REST以及RESTful的理解/
-http://www.jilei.site/2017/08/31/基于Docker镜像的个人hexo博客/
-http://www.jilei.site/2017/08/23/Dockers-是个什么鬼？/
