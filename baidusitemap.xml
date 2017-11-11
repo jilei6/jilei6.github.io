@@ -4,8 +4,23 @@
 
     
   <url>
+    <loc>http://jarenbig.coding.me/2017/11/11/Hybrid%E6%A1%86%E6%9E%B6%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3/</loc>
+    <lastmod>2017-11-11T09:15:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hybrid框架设计思想</title>
+        <pubTime>2017-11-11T09:03:02.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jarenbig.coding.me/2017/10/24/%E5%9F%BA%E4%BA%8EAF3.0%E5%BC%80%E5%8F%91%E7%9A%84%E8%AF%B7%E6%B1%82%E6%A1%86%E6%9E%B6framework/</loc>
-    <lastmod>2017-10-24T07:54:48.000Z</lastmod>
+    <lastmod>2017-11-11T09:11:12.000Z</lastmod>
     <data>
         <display>
         <title>基于AF3制作framework二封装的请求框架</title>
@@ -39,6 +54,7 @@
     </url>
 
     
+    
   <url>
     <loc>http://jarenbig.coding.me/2017/09/13/REST%E4%BB%A5%E5%8F%8ARESTful%E7%9A%84%E7%90%86%E8%A7%A3/</loc>
     <lastmod>2017-10-10T07:01:30.000Z</lastmod>
@@ -57,7 +73,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>http://jarenbig.coding.me/2017/09/18/%E5%9F%BA%E4%BA%8EDocker%E9%95%9C%E5%83%8F%E7%9A%84%E4%B8%AA%E4%BA%BAhexo%E5%8D%9A%E5%AE%A2-%EF%BC%88%E4%BA%8C%EF%BC%89/</loc>

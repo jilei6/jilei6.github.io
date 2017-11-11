@@ -1,1 +1,1 @@
-http://www.jilei.site/2017/10/24/基于AF3.0开发的请求框架framework/
+http://www.jilei.site/2017/11/11/Hybrid框架设计思想/
