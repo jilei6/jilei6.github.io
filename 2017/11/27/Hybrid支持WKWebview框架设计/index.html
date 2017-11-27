@@ -6,19 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.jilei.site">
-  <title>Tag: object-c | Jaren的移动城堡</title>
+  <title>Hybrid支持WKWebview框架设计 | Jaren的移动城堡</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="对佛学颇有造诣的互联网小兵一枚。">
-<meta name="keywords" content="“iOS,Java,python,Linux,Hadoop,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder&quot;">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Jaren的移动城堡">
-<meta property="og:url" content="http://www.jilei.site/tags/object-c/index.html">
+  <meta name="description" content="上一篇讲了基于UIWebview的Hybrid的架构设计，深知UIWebview无法和WKWebview的优越性能相媲美，所以最近又讲框架优化完美的支持了WKWebview。架构思想其实都差不多，不过比UIWebview多了个别核心模块，话不多说，先上新设计图：">
+<meta name="keywords" content="Swift,iOS,Github,Hybrid,WKWebview">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hybrid支持WKWebview框架设计">
+<meta property="og:url" content="http://www.jilei.site/2017/11/27/Hybrid支持WKWebview框架设计/index.html">
 <meta property="og:site_name" content="Jaren的移动城堡">
-<meta property="og:description" content="对佛学颇有造诣的互联网小兵一枚。">
+<meta property="og:description" content="上一篇讲了基于UIWebview的Hybrid的架构设计，深知UIWebview无法和WKWebview的优越性能相媲美，所以最近又讲框架优化完美的支持了WKWebview。架构思想其实都差不多，不过比UIWebview多了个别核心模块，话不多说，先上新设计图：">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://www.jilei.site/assets/blogImg/wk1.png">
+<meta property="og:image" content="http://www.jilei.site/assets/blogImg/wk2.png">
+<meta property="og:updated_time" content="2017-11-27T05:23:27.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jaren的移动城堡">
-<meta name="twitter:description" content="对佛学颇有造诣的互联网小兵一枚。">
+<meta name="twitter:title" content="Hybrid支持WKWebview框架设计">
+<meta name="twitter:description" content="上一篇讲了基于UIWebview的Hybrid的架构设计，深知UIWebview无法和WKWebview的优越性能相媲美，所以最近又讲框架优化完美的支持了WKWebview。架构思想其实都差不多，不过比UIWebview多了个别核心模块，话不多说，先上新设计图：">
+<meta name="twitter:image" content="http://www.jilei.site/assets/blogImg/wk1.png">
   
     <link rel="alternative" href="/atom.xml" title="Jaren的移动城堡" type="application/atom+xml">
   
@@ -152,64 +156,225 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Hybrid支持WKWebview框架设计" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/17/about-pjax/" class="archive-article-date">
-  	<time datetime="2017-08-17T04:04:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-17</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/17/about-pjax/">pjax: 当ajax遇上pushState</a>
+    <h1 class="article-title" itemprop="name">
+      Hybrid支持WKWebview框架设计
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/11/27/Hybrid支持WKWebview框架设计/" class="archive-article-date">
+  	<time datetime="2017-11-27T05:15:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-27</time>
+</a>
+        
+      </header>
+    
+
+<!-- 目录内容 -->
+
+<!-- 目录内容结束 -->
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>上一篇讲了基于UIWebview的Hybrid的架构设计，深知UIWebview无法和WKWebview的优越性能相媲美，所以最近又讲框架优化完美的支持了WKWebview。架构思想其实都差不多，不过比UIWebview多了个别核心模块，话不多说，先上新设计图：<br><a id="more"></a>    </p>
+</blockquote>
+<p><img src="/assets/blogImg/wk1.png" alt="ico原来的样子"><br>整体思路是这样的：</p>
+<p>1.在iOS里面启动一个weberver服务，这个服务映射根目录为前端包文件夹，启动这个服务的目的就是为了解决wk不能加载本地资源的问题</p>
+<p>2.通过调用wk的私有API去拦截发出的所有的AJAX请求，并替换请求的域，转发该请求获得数据返回给前端。这个是为了解决WK的跨域请求的问题</p>
+<p>3.核心的就是上述2个模块，其余的做了前端加密校验机制，和初次预加载机制。</p>
+<p>解惑：</p>
+<p>1.关于拦截跨域的问题 ，实质上是因为我本地起了一个weberver服务之后，所有页面发出的AJXA请求如下图所示：<br> <img src="/assets/blogImg/wk2.png" alt="ico原来的样子"></p>
+<p>跨域<br>就像你看到的一样，所有请求的域都会是本地的域,即：192.168.100.199这样的请求自然是无法得到想要的数据，所以需要进行拦截请求</p>
+<p>2.关于本地启动weberver服务的问题。iOS支持本地启动weberver服务，我使用的第三方的插件库：GCDWebServer 一个轻量级的移动端web服务插件。可以指定根目录，指定端口号功能强大，使用简便。当然我在测试过程中发现，一但APP进入了后台，该服务会被停止，不能进行访问，APP激活状态下，通过PC端（同一局域网）任何浏览器均可访问到iOS沙盒目录下的文件。</p>
+<p>3.关于私有API的问题，我参考了<a href="https://blog.yeatse.com/2016/10/26/support-nsurlprotocol-in-wkwebview/" target="_blank" rel="external">这篇博客</a>。里面足够可以解释你想知道的问题。</p>
+<p>4.我上传了一个前端打包的脚本zipTool.py，用于打包过程中配置基本信息和加密处理。加密密钥KEY=‘xxxxxxx’ 是约束好之后再iOS中通过该密钥进行检验的。请在python3环境下运行。</p>
+<p>还有其他的一些细节，可以参考我的<a href="https://github.com/jilei6/WKHybrid" target="_blank" rel="external">代码</a>查看 。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Swift</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">object-c</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Github</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Hybrid</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">WKWebview</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.jilei.site/2017/11/27/Hybrid支持WKWebview框架设计/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/11/11/Hybrid框架设计思想/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hybrid框架设计思想</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
   
 
-    
+  
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: "http://www.jilei.site/2017/11/27/Hybrid支持WKWebview框架设计/", 
+    sourceId: "Hybrid支持WKWebview框架设计",
+    productKey: "flase",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+  
+
+  
+<!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2146231"></script>
+<!-- UY END -->
+
+  
 
 
           </div>
@@ -249,9 +414,9 @@ host3 = window.location.href;
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
