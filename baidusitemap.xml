@@ -4,6 +4,21 @@
 
     
   <url>
+    <loc>http://jarenbig.coding.me/2018/01/05/iOS%E8%87%AA%E5%8A%A8%E5%8C%96%E6%89%93%E5%8C%85-Jenkins-gitlab-fir-shell/</loc>
+    <lastmod>2018-01-05T10:18:46.000Z</lastmod>
+    <data>
+        <display>
+        <title>iOS自动化打包(Jenkins + gitlab + fir + shell)</title>
+        <pubTime>2018-01-05T09:08:05.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jarenbig.coding.me/2017/11/11/Hybrid%E6%A1%86%E6%9E%B6%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3/</loc>
     <lastmod>2017-11-27T05:24:14.000Z</lastmod>
     <data>
@@ -132,11 +147,11 @@
         <title>基于Docker镜像的个人hexo博客</title>
         <pubTime>2017-08-31T09:03:22.000Z</pubTime>
         
-        <tag>Docker</tag>
-         
         <tag>Github</tag>
          
         <tag>Html</tag>
+         
+        <tag>Docker</tag>
          
          
            
