@@ -6,20 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.jilei.site">
-  <title>相册 | Jaren的移动城堡</title>
+  <title>SnowFlake框架解析 | Jaren的移动城堡</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Photos 	待续   	图片正在加载中…     (function() {     var loadScript = function(path) {       var $script = document.createElement(&apos;script&apos;)       document.getElementsByTagName(&apos;body&apos;)[0].appendChild($scrip">
-<meta name="keywords" content="“iOS,Java,python,Linux,Hadoop,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder&quot;">
-<meta property="og:type" content="website">
-<meta property="og:title" content="相册">
-<meta property="og:url" content="http://www.jilei.site/photos/index.html">
+  <meta name="description" content="2018年的第一场雪，从32层往外看可以看到肆虐的雪花飞扬，不一会儿窗台上积攒了厚厚的一层，同事说这是上海自08年以来最大的一场雪了。想来真是有幸，17年一整年发生了许多的事情，似乎所有积郁的都在这一场雪了.瑞雪兆丰年，希望2018年能不忘初心，砥砺前行">
+<meta name="keywords" content="iOS,Hybrid,SnowFlake">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SnowFlake框架解析">
+<meta property="og:url" content="http://www.jilei.site/2018/01/25/SnowFlake框架解析/index.html">
 <meta property="og:site_name" content="Jaren的移动城堡">
-<meta property="og:description" content="Photos 	待续   	图片正在加载中…     (function() {     var loadScript = function(path) {       var $script = document.createElement(&apos;script&apos;)       document.getElementsByTagName(&apos;body&apos;)[0].appendChild($scrip">
+<meta property="og:description" content="2018年的第一场雪，从32层往外看可以看到肆虐的雪花飞扬，不一会儿窗台上积攒了厚厚的一层，同事说这是上海自08年以来最大的一场雪了。想来真是有幸，17年一整年发生了许多的事情，似乎所有积郁的都在这一场雪了.瑞雪兆丰年，希望2018年能不忘初心，砥砺前行">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-07-26T16:17:28.000Z">
+<meta property="og:image" content="http://www.jilei.site/assets/blogImg/SnowFlake1.jpeg">
+<meta property="og:image" content="http://www.jilei.site/assets/blogImg/SnowFlake2.png">
+<meta property="og:image" content="http://www.jilei.site/assets/blogImg/SnowFlake3.png">
+<meta property="og:image" content="http://www.jilei.site/assets/blogImg/SnowFlake5.png">
+<meta property="og:updated_time" content="2018-01-25T11:35:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="相册">
-<meta name="twitter:description" content="Photos 	待续   	图片正在加载中…     (function() {     var loadScript = function(path) {       var $script = document.createElement(&apos;script&apos;)       document.getElementsByTagName(&apos;body&apos;)[0].appendChild($scrip">
+<meta name="twitter:title" content="SnowFlake框架解析">
+<meta name="twitter:description" content="2018年的第一场雪，从32层往外看可以看到肆虐的雪花飞扬，不一会儿窗台上积攒了厚厚的一层，同事说这是上海自08年以来最大的一场雪了。想来真是有幸，17年一整年发生了许多的事情，似乎所有积郁的都在这一场雪了.瑞雪兆丰年，希望2018年能不忘初心，砥砺前行">
+<meta name="twitter:image" content="http://www.jilei.site/assets/blogImg/SnowFlake1.jpeg">
   
     <link rel="alternative" href="/atom.xml" title="Jaren的移动城堡" type="application/atom+xml">
   
@@ -153,17 +158,21 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-photos" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-SnowFlake框架解析" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      相册
+      SnowFlake框架解析
     </h1>
   
 
+        
+        <a href="/2018/01/25/SnowFlake框架解析/" class="archive-article-date">
+  	<time datetime="2018-01-25T08:50:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-25</time>
+</a>
         
       </header>
     
@@ -174,26 +183,42 @@
 
     <div class="article-entry" itemprop="articleBody">
       
-        <link rel="stylesheet" href="./ins.css">
-<div class="photos-btn-wrap">
-	<a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="external">Photos</a>
-	<a class="photos-btn" href="#">待续</a>
-</div>
-<div class="instagram itemscope">
-	<a href="https://www.instagram.com/lawlitewang20/" target="_blank" class="open-ins">图片正在加载中…</a>
-</div>
-<script>
-  (function() {
-    var loadScript = function(path) {
-      var $script = document.createElement('script')
-      document.getElementsByTagName('body')[0].appendChild($script)
-      $script.setAttribute('src', path)
-    }
-    setTimeout(function() {
-      loadScript('./ins.js')
-    }, 0)
-  })()
-</script>
+         <div align="left"><br><img width="450" height="600" src="/assets/blogImg/SnowFlake1.jpeg" "2018年的第一场雪"=""><br></div> 
+
+<pre><code>2018年的第一场雪，从32层往外看可以看到肆虐的雪花飞扬，不一会儿窗台上积攒了厚厚的一层，同事说这是上海自08年以来最大的一场雪了。想来真是有幸，17年一整年发生了许多的事情，似乎所有积郁的都在这一场雪了.瑞雪兆丰年，希望2018年能不忘初心，砥砺前行
+</code></pre> <a id="more"></a>
+<h6 id="SnowFlake是什么"><a href="#SnowFlake是什么" class="headerlink" title="SnowFlake是什么"></a>SnowFlake是什么</h6><ul>
+<li>SnowFlake一套iOS的基于Hybrid框架</li>
+<li>支持uiwebview/wkwebview容器。</li>
+<li>支持iOS8以上设备。</li>
+</ul>
+<h6 id="Hybrid简介"><a href="#Hybrid简介" class="headerlink" title="Hybrid简介"></a>Hybrid简介</h6><p>定义:介于Web App与Native App的一种折中方案，底层(框架)部分由iOS/Android开发人员处理，上层(内容展现)部分由Web前端人员处理，用户界面操作逻辑及部分静态资源驻留本地，使得Web App可以对操作迅速反应并在很大程度上实现离线访问。Hybrid App追求趋近于原生App的体验，但目前还较困难。<br>  <img src="/assets/blogImg/SnowFlake2.png" alt="ico原来的样子"> </p>
+<h6 id="环境依赖"><a href="#环境依赖" class="headerlink" title="环境依赖"></a>环境依赖</h6><ul>
+<li>cocoapods1.0+</li>
+<li>python3.6</li>
+</ul>
+<h6 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h6><ul>
+<li>下载源代码，更新pod安装依赖(cd 至项目根目录下，执行<code>pod install</code>)</li>
+<li>预置前端代码zip压缩包，如：client.zip（注意此处压缩包为通过python打包压缩的包，具体原因及用法后面会讲）</li>
+<li><p>修改业务宏定义参数，如:</p>
+<p>1.<figure class="highlight plain"><figcaption><span>文件中</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">download_url：（修改为自己的下载地址）</div></pre></td></tr></table></figure></p>
+<p>2.<figure class="highlight plain"><figcaption><span>文件中</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#define CurrentHost @&quot;192.168.10.1&quot; //(初始化需要配置的默认代理转发的域名)</div><div class="line">#define RootSource @&quot;client&quot; （即打包出来的zip的包名即是根目录）</div></pre></td></tr></table></figure></p>
+<p>3.<figure class="highlight plain"><figcaption><span>文件中</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#define RootHtml @&quot;/index.html&quot;（指定的入口文件）</div></pre></td></tr></table></figure></p>
+</li>
+<li><p>前端代码压缩包：</p>
+<p>前端给到的代码压缩包可能是如下的结构：<br>  <img src="/assets/blogImg/SnowFlake3.png" alt="ico原来的样子"><br>1.在python3环境下之行ziptool脚本命令。该脚本中我添加了压缩包的基本信息，比如：版本号、入口文件、根目录以及加密秘钥等信息，所以需要移动端开发人员自行打包<br>2.如果执行报错，情pip根据报错信息进行安装Crypto、pyDes等库。<br>3.关于Crypto加密库，如果更新过之后依旧报错，我上传了一个稳定版本，可以自行下载替换本地关于Crypto库。</p>
+</li>
+</ul>
+<h6 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h6><ul>
+<li>1.通过和前端进行深度交互，代理转发所有前端ajax请求。这样做的目的是因为wkwebview目前在拦截所有的请求的过程中，因为性能问题，将所有请求中的body信息全部丢失，所以不能成功请求到Post类型的接口数据(交互框架接入的是<a href="https://github.com/marcuswestin/WebViewJavascriptBridge" target="_blank" rel="external">WebViewJavascriptBridge</a>)所以前端也是需要接入该框架。</li>
+<li>2.在iOS里面启动一个weberver服务，这个服务映射根目录为前端包文件夹，模拟node服务的方法在本地启动了一个weberver服务，这个模块的核心是：<a href="https://github.com/swisspol/GCDWebServer" target="_blank" rel="external">GCDWebServer</a> ，一个轻量级的移动端web服务插件。将映射本地前端代码渲染页面。一但APP进入了后台，该服务会被停止，不能进行访问，防止在浏览器状态下进行访问</li>
+<li>3.目前前端代码更新的机制为全量更新，即通过传当前zip的版本号给服务器，服务器校验是否需要更新，以及是否强制更新，并将下载链接返回</li>
+<li>4.转发如下图<br><img src="/assets/blogImg/SnowFlake5.png" alt="ico原来的样子"><br>需要注意的是，我这里的请求并没有使用afnetworking 原因是因为在实际转发过程中发现，后端业务api返回的json数据有可能是map即字典类型的，前端可能是需要按照后端返回的字典的顺序进行排序，众所周知字典数据是无序的结构，在使用NSJSONSerialization转化字符串的过程中顺序发生了乱序，这个问题我会再用一片博客进行详细论证。总之，只有通过原始的data类型的数据进行直接转换可以保证数据的时许性。</li>
+<li>5.其他的业务api如，用户信息保存，校验token，弱网检测等需要根据自己的业务需求和前端进行制定</li>
+</ul>
+<h6 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h6><ul>
+<li>暂时这些吧，SnowFlake尚有许多不完善之处，如果你有好的建议和想法，期望我们可以共同探讨研究。</li>
+</ul>
 
       
 
@@ -233,6 +258,25 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Hybrid</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">SnowFlake</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -283,7 +327,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://www.jilei.site/photos/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.jilei.site/2018/01/25/SnowFlake框架解析/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -296,6 +340,16 @@
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/2018/01/05/iOS自动化打包-Jenkins-gitlab-fir-shell/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">iOS自动化打包(Jenkins + gitlab + fir + shell)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -314,6 +368,29 @@
 </aside>
 
 
+
+  
+
+  
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: "http://www.jilei.site/2018/01/25/SnowFlake框架解析/", 
+    sourceId: "SnowFlake框架解析",
+    productKey: "flase",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+  
+
+  
+<!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2146231"></script>
+<!-- UY END -->
+
+  
 
 
           </div>
@@ -353,7 +430,7 @@ host3 = window.location.href;
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

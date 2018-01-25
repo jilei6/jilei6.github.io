@@ -1,1 +1,1 @@
-http://www.jilei.site/2018/01/05/iOS自动化打包-Jenkins-gitlab-fir-shell/
+http://www.jilei.site/2018/01/25/SnowFlake框架解析/

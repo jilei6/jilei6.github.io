@@ -9,7 +9,7 @@
   <title>iOS自动化打包(Jenkins + gitlab + fir + shell) | Jaren的移动城堡</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="概述：iOS 的打包是一件令人心烦的事，经常会因为打包而打断当前做的事情。程序员时间本来就宝贵，能不能把打包这件事完全交给机器去做，自己只需要发一个打包命令给机器就不用管呢？答案是肯定的。">
-<meta name="keywords" content="“iOS,Java,python,Linux,Hadoop,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder&quot;">
+<meta name="keywords" content="Jenkins,gitlab,自动化打包">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS自动化打包(Jenkins + gitlab + fir + shell)">
 <meta property="og:url" content="http://www.jilei.site/2018/01/05/iOS自动化打包-Jenkins-gitlab-fir-shell/index.html">
@@ -57,7 +57,7 @@
 <meta property="og:image" content="http://www.jilei.site/assets/blogImg/jenkins39.png">
 <meta property="og:image" content="http://www.jilei.site/assets/blogImg/jenkins40.png">
 <meta property="og:image" content="http://www.jilei.site/assets/blogImg/jenkins41.png">
-<meta property="og:updated_time" content="2018-01-05T10:18:46.000Z">
+<meta property="og:updated_time" content="2018-01-25T11:34:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS自动化打包(Jenkins + gitlab + fir + shell)">
 <meta name="twitter:description" content="概述：iOS 的打包是一件令人心烦的事，经常会因为打包而打断当前做的事情。程序员时间本来就宝贵，能不能把打包这件事完全交给机器去做，自己只需要发一个打包命令给机器就不用管呢？答案是肯定的。">
@@ -360,6 +360,25 @@ Build step &apos;Upload to fir.im&apos; marked build as failure
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Jenkins</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">gitlab</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">自动化打包</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -424,6 +443,15 @@ Build step &apos;Upload to fir.im&apos; marked build as failure
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/01/25/SnowFlake框架解析/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          SnowFlake框架解析
+        
+      </div>
+    </a>
   
   
     <a href="/2017/11/27/Hybrid支持WKWebview框架设计/" id="article-nav-older" class="article-nav-link-wrap">
@@ -578,31 +606,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Swift</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">iOS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Github</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Hybrid</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">WKWebview</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">REST</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RESTful</a>
+                <a href="javascript:void(0)" class="js-tag color2">Docker</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -618,6 +622,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">iOS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Hybrid</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">UIWebview</a>
               </li>
              
@@ -626,7 +642,35 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Docker</a>
+                <a href="javascript:void(0)" class="js-tag color1">Swift</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">WKWebview</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">REST</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RESTful</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Jenkins</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">gitlab</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">自动化打包</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">SnowFlake</a>
               </li>
             
             <div class="clearfix"></div>
