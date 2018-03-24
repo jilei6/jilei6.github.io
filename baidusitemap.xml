@@ -3,6 +3,25 @@
 
 
     
+  <url>
+    <loc>http://jarenbig.coding.me/2018/03/24/%E4%BD%BF%E7%94%A8-fastlane-fir%E5%AE%9E%E7%8E%B0-iOS-%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%E4%B8%8A%E4%BC%A0-1/</loc>
+    <lastmod>2018-03-24T09:44:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>使用 fastlane +fir实现 iOS 持续集成上传</title>
+        <pubTime>2018-03-24T09:23:23.000Z</pubTime>
+        
+        <tag>Fastlane</tag>
+         
+        <tag>Fir</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://jarenbig.coding.me/2018/02/28/%E5%B2%81%E6%9C%88%E4%BE%9D%E6%97%A7%E9%9D%99%E5%A5%BD-%E5%8F%AF%E6%83%9C%E6%88%91%E4%BB%AC%E5%B7%B2%E8%80%81/</loc>
@@ -27,13 +46,13 @@
         <title>Hybrid支持WKWebview框架设计</title>
         <pubTime>2017-11-27T05:15:13.000Z</pubTime>
         
-        <tag>Swift</tag>
-         
         <tag>iOS</tag>
          
         <tag>Github</tag>
          
         <tag>Hybrid</tag>
+         
+        <tag>Swift</tag>
          
         <tag>WKWebview</tag>
          
@@ -94,13 +113,13 @@
         <title>Hybrid框架设计思想</title>
         <pubTime>2017-11-11T09:03:02.000Z</pubTime>
         
+        <tag>Objective-C</tag>
+         
         <tag>iOS</tag>
          
         <tag>Github</tag>
          
         <tag>Hybrid</tag>
-         
-        <tag>Objective-C</tag>
          
         <tag>UIWebview</tag>
          
@@ -119,11 +138,11 @@
         <title>基于AF3制作framework二封装的请求框架</title>
         <pubTime>2017-10-24T04:04:15.000Z</pubTime>
         
+        <tag>Objective-C</tag>
+         
         <tag>iOS</tag>
          
         <tag>Github</tag>
-         
-        <tag>Objective-C</tag>
          
          
            
@@ -189,9 +208,9 @@
         <title>基于Docker镜像的个人hexo博客</title>
         <pubTime>2017-08-31T09:03:22.000Z</pubTime>
         
-        <tag>Docker</tag>
-         
         <tag>Github</tag>
+         
+        <tag>Docker</tag>
          
         <tag>Html</tag>
          
