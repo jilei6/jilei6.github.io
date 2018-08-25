@@ -196,7 +196,7 @@
 <p>2.简单来说，Fastlane是一整套的工具组合套装。它里面的很多命令执行的底层并不是自己实现的，而是调用其他的插件或者工具执行的。比如说打包，Fastlane中的gym工具只是xcodebuild工具的一个封装，调用的其实还是xcodebuild中的打包命令而已。所以其实归根到底和xcode中的Archive师出同门而已。Fastlane中大多数命令都是这样类似的原理</p>
 <p>3.Fastlane本身没有一套特殊语法，使用的Ruby语言，相信使用过cocoapods的同学应该很容易理解。</p>
 <p>4.Fastlane可以非常快速简单的搭建一个自动化发布服务，并且支持Android，iOS，MacOS。他可以实现一条命令从编译到选版发布全程不用干预。作为程序员的你只要一条命令，看集美剧，发布就完成了。截止刚刚Fastlane官网上宣称已经为程序员节省了4百万小时+</p>
-<p>二、Fastlane组件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">deliver: 上传截图, 元数据, app应用程序到App Store</div><div class="line"></div><div class="line">supply: 上传Android app应用程序和元数据到Google Play</div><div class="line"></div><div class="line">snapshot: 自动捕获iOS app应用程序本地截图</div><div class="line"></div><div class="line">screengrab: 自动捕获Android app应用程序本地截图</div><div class="line"></div><div class="line">frameit: 快速截屏并将截屏放入设备中</div><div class="line"></div><div class="line">pem: 自动生成和更新推送通知配置文件</div><div class="line"></div><div class="line">sigh: 开发证书和描述文件下载</div><div class="line"></div><div class="line">produce: 使用命令行在iTunes Connect上创建新的app和开发入口</div><div class="line"></div><div class="line">cert: 自动创建和配置iOS代码签名证书</div><div class="line"></div><div class="line">spaceship: Ruby 库访问 Apple开发者中心和 iTunes Connect</div><div class="line"></div><div class="line">pilot: 最好的方式管理你的TestFlight 测试人员和从终端构建</div><div class="line"></div><div class="line">boarding: 最简单的方式邀请你的TestFlight beta测试人员</div><div class="line"></div><div class="line">gym: iOS app打包签名自动化工具</div><div class="line"></div><div class="line">match: 使用Git同步你的团队证书和配置文件</div><div class="line"></div><div class="line">scan: 最简单方式测试你的 iOS 和 Mac apps</div></pre></td></tr></table></figure></p>
+<p>二、Fastlane组件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">deliver: 上传截图, 元数据, app应用程序到App Store</span><br><span class="line"></span><br><span class="line">supply: 上传Android app应用程序和元数据到Google Play</span><br><span class="line"></span><br><span class="line">snapshot: 自动捕获iOS app应用程序本地截图</span><br><span class="line"></span><br><span class="line">screengrab: 自动捕获Android app应用程序本地截图</span><br><span class="line"></span><br><span class="line">frameit: 快速截屏并将截屏放入设备中</span><br><span class="line"></span><br><span class="line">pem: 自动生成和更新推送通知配置文件</span><br><span class="line"></span><br><span class="line">sigh: 开发证书和描述文件下载</span><br><span class="line"></span><br><span class="line">produce: 使用命令行在iTunes Connect上创建新的app和开发入口</span><br><span class="line"></span><br><span class="line">cert: 自动创建和配置iOS代码签名证书</span><br><span class="line"></span><br><span class="line">spaceship: Ruby 库访问 Apple开发者中心和 iTunes Connect</span><br><span class="line"></span><br><span class="line">pilot: 最好的方式管理你的TestFlight 测试人员和从终端构建</span><br><span class="line"></span><br><span class="line">boarding: 最简单的方式邀请你的TestFlight beta测试人员</span><br><span class="line"></span><br><span class="line">gym: iOS app打包签名自动化工具</span><br><span class="line"></span><br><span class="line">match: 使用Git同步你的团队证书和配置文件</span><br><span class="line"></span><br><span class="line">scan: 最简单方式测试你的 iOS 和 Mac apps</span><br></pre></td></tr></table></figure></p>
 <p>等等….我们今天用不了这么多，仅仅需要用到2-3个而已，但是从这些组件可以看到，Fastlane还是很强大的，基本上能满足客户端打包发布的所有需求了。</p>
 <p>三、Fastlane和Jenkins自动化的差异和选择</p>
 <p>单就笔者对这两者的使用来看，两者之间各有利弊，关键看你的需求</p>
@@ -542,10 +542,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Docker</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Swift</a>
               </li>
              
@@ -574,14 +570,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ReactNative</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">跨平台</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">REST</a>
               </li>
              
@@ -590,19 +578,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ReactNative</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">跨平台</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">SnowFlake</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Jenkins</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">gitlab</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">自动化打包</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -619,6 +603,34 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Fir</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">文学</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">梦想</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Jenkins</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">gitlab</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">自动化打包</a>
               </li>
              
               <li class="article-tag-list-item">

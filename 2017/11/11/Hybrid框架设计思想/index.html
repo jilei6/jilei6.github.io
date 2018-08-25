@@ -195,7 +195,7 @@
 <p>部分对用户体验要求较高的页面使用原生开发</p>
 <p>我和我的团队在对用户体验要求较高的页面（比如首页），我们最好还是使用原生开发。这也是Hybrid的真正意义所在吧。但随之也会产生一个新的问题：原生页面和H5的跳转实现。</p>
 <p><strong>1.http和https的处理</strong></p>
-<p>由于现在对网络安全的重视（当然苹果也由于要求），越来越多的App加入了https的支持。有一种非常普遍的问题需要我们注意：跨域。举个例子，我们的UIWebView加载的页面是     <a href="https://www.baidu.com" target="_blank" rel="external">https://www.baidu.com</a> ，但baidu.com这个页面中的某段js代码会执行页面跳转，而跳转的协议是hybrid，也就是诸如hybrid://AViewController类似的URL地址。App意识到这可能是一段不安全的代码，因此不给于执行，之前就是遇到了这个问题导致我们App不能响应任何【H5-&gt;原生】跳转。那如何“鱼和熊掌兼得”呢，解决方案有两种，各有利弊：</p>
+<p>由于现在对网络安全的重视（当然苹果也由于要求），越来越多的App加入了https的支持。有一种非常普遍的问题需要我们注意：跨域。举个例子，我们的UIWebView加载的页面是     <a href="https://www.baidu.com" target="_blank" rel="noopener">https://www.baidu.com</a> ，但baidu.com这个页面中的某段js代码会执行页面跳转，而跳转的协议是hybrid，也就是诸如hybrid://AViewController类似的URL地址。App意识到这可能是一段不安全的代码，因此不给于执行，之前就是遇到了这个问题导致我们App不能响应任何【H5-&gt;原生】跳转。那如何“鱼和熊掌兼得”呢，解决方案有两种，各有利弊：</p>
 <p>在调用UIWebView的loadRequest方法时，先去判断本地有没有资源，有的话加载本地资源，这样其实就变相的走了http协议或者file协议，就不存在https跨域的问题。但是对于UIWebView的js请求我们还是要进行拦截，走本地的https请求即可。这个方案的优点在于，由于html文件资源在本地所以加载资源速度比较快，用户体验不错；缺点就是我们必须通过URLProtocol重新定义所有的请求，这就需要我们在Request请求的时候避免在httpbody或者httpbodystream中设置参数，转而在header中设置。另外一种解决方案是，请求的时候将URL地址直接从https替换成http，这样的好处就是不需要定义所有的网络请求，但由于html文件资源在远端所以加载资源速度比较慢。</p>
 <p><strong>2.参数的传递</strong></p>
 <p>在原生和H5之间跳转的时候，参数传递都作为URL地址的一部分，例如AViewController中有属性username和tel，那我们在跳转到AViewController是路由的写法应该是类似：</p>
@@ -236,7 +236,7 @@
 3.交互协议的制定 
 </code></pre><p><strong>一些问题遇到的问题：</strong></p>
 <p>事实上，在iOS开发当中，你会发现如果你采用了WKwebview会后会出现各种各样的问题，比如说跨域的问题（可以多了解http协议本身，这个问题已经解决），比如说某些弹框失败的问题包括cookie的问题，当然这都是wk范畴的问题，有些在我后来的实践当中已经解决了，有些还没有，我后面有时间的话会把这些解决方案逐一分享给大家。当然目前针对上述问题我发现包括当前开源的无论是豆瓣还是腾讯团队的iOS版Hybrid框架都没有解决这个问题，统一采用的UIwebview控件，我个人以为使用WKwebview一定是大势所趋，所有问题一定会要解决毕竟技术是需要一步步来推动的。最后来让大家看一下我们之前团队做的这个开源的Hybrid框架源码，代码写的很一般，希望大家不要喷，它只是给了一个设计思路以供大家参考而已：</p>
-<p><a href="https://github.com/jilei6/Watermelon" target="_blank" rel="external">Hybrid框架</a>。</p>
+<p><a href="https://github.com/jilei6/Watermelon" target="_blank" rel="noopener">Hybrid框架</a>。</p>
 
       
 
@@ -538,10 +538,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Docker</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Swift</a>
               </li>
              
@@ -570,14 +566,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ReactNative</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">跨平台</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">REST</a>
               </li>
              
@@ -586,19 +574,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ReactNative</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">跨平台</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">SnowFlake</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Jenkins</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">gitlab</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">自动化打包</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -615,6 +599,34 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Fir</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">文学</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">梦想</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Jenkins</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">gitlab</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">自动化打包</a>
               </li>
              
               <li class="article-tag-list-item">

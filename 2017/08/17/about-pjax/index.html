@@ -245,18 +245,18 @@
 <p>##<strong>四、注意事项</strong></p>
 <p>然而pjax不等于单纯的分离使用pushstate与ajax，还必须得做一些封装。缘于以下我能想到的注意事项：</p>
 <ul>
-<li>服务器端增加额外处理逻辑<br>服务器端，需要根据请求的参数，作出全页渲染或局部渲染响应<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Accept:text/html, */*; q=0.01</div><div class="line">Accept-Encoding:gzip,deflate,sdch</div><div class="line">Connection:keep-alive</div><div class="line">Host:qianduannotes.duapp.com</div><div class="line">User-Agent:AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36</div><div class="line">X-Requested-With:XMLHttpRequest</div><div class="line">X-PJAX:true</div></pre></td></tr></table></figure>
+<li>服务器端增加额外处理逻辑<br>服务器端，需要根据请求的参数，作出全页渲染或局部渲染响应<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Accept:text/html, */*; q=0.01</span><br><span class="line">Accept-Encoding:gzip,deflate,sdch</span><br><span class="line">Connection:keep-alive</span><br><span class="line">Host:qianduannotes.duapp.com</span><br><span class="line">User-Agent:AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36</span><br><span class="line">X-Requested-With:XMLHttpRequest</span><br><span class="line">X-PJAX:true</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>比如请求头部可以设定一个X-PAJX:true，用以通知服务器。</p>
 <ul>
 <li><p>浏览器兼容<br>假如浏览器不支持pushstate，提供fallback操作，直接打开需更改url的地址：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$.support.pjax = window.history &amp;&amp; window.history.pushState</div><div class="line">// Fallback</div><div class="line">if ( !$.support.pjax ) &#123;</div><div class="line">  $.pjax = function( options ) &#123;</div><div class="line">    window.location = $.isFunction(options.url) ? options.url() : options.url</div><div class="line">  &#125;</div><div class="line">  $.fn.pjax = function() &#123; return this &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$.support.pjax = window.history &amp;&amp; window.history.pushState</span><br><span class="line">// Fallback</span><br><span class="line">if ( !$.support.pjax ) &#123;</span><br><span class="line">  $.pjax = function( options ) &#123;</span><br><span class="line">    window.location = $.isFunction(options.url) ? options.url() : options.url</span><br><span class="line">  &#125;</span><br><span class="line">  $.fn.pjax = function() &#123; return this &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>本地存储机制<br>无疑pjax与localstorage共同使用可以进一步提升体验，但这一步容易忽略的是数据上报。</p>
 </li>
 </ul>
-<p>##<strong>五、参考资料</strong><br><a href="https://github.com/defunkt/jquery-pjax" target="_blank" rel="external">jquery-pjax</a><br><a href="https://github.com/welefen/pjax" target="_blank" rel="external">welefen封装的pjax</a></p>
+<p>##<strong>五、参考资料</strong><br><a href="https://github.com/defunkt/jquery-pjax" target="_blank" rel="noopener">jquery-pjax</a><br><a href="https://github.com/welefen/pjax" target="_blank" rel="noopener">welefen封装的pjax</a></p>
 
       
 
@@ -554,10 +554,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Docker</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Swift</a>
               </li>
              
@@ -586,14 +582,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ReactNative</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">跨平台</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">REST</a>
               </li>
              
@@ -602,19 +590,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ReactNative</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">跨平台</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">SnowFlake</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Jenkins</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">gitlab</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">自动化打包</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -631,6 +615,34 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Fir</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">文学</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">梦想</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Jenkins</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">gitlab</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">自动化打包</a>
               </li>
              
               <li class="article-tag-list-item">
